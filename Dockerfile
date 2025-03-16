@@ -5,6 +5,7 @@ RUN apt-get update \
     && apt-get install -y \
     nano \
     vim \
+    wget \
     ros-humble-gazebo-ros-pkgs \
     && rm -rf /var/lib/apt/lists/*
 

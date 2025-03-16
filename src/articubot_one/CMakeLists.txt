@@ -37,4 +37,15 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(PROGRAMS
+  articutbot_one/robot_mov.py  
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+  articutbot_one/percept.py  
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
 ament_package()

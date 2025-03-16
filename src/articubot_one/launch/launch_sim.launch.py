@@ -38,9 +38,23 @@ def generate_launch_description():
                                    '-entity', 'my_bot'],
                         output='screen')
 
+    robot_mov_node = Node(
+        package='articubot_one',       # Replace with your package name if different
+        executable='robot_mov.py',        # Name of your executable
+        output='screen'
+    )
+
+    percept_node = Node(
+        package='articubot_one',       # Replace with your package name if different
+        executable='percept.py',        # Name of your executable
+        output='screen'
+    )
+
     # Launch them all!
     return LaunchDescription([
         rsp,
         gazebo,
         spawn_entity,
+        robot_mov_node,
+        percept_node
     ])

@@ -1,0 +1,11 @@
+source /opt/ros/humble/setup.bash 
+cd /atwork_ws
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch src/articubot_one/launch/launch_sim.launch.py
+
+//show nodes
+ros2 node list
+
+//show topics
+ros2 topic list
